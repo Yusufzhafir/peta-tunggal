@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/ui/footer";
 import { Navbar } from "@/components/ui/navbar";
+import Link from "next/link";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="font-sans min-h-screen bg-linear-to-br from-blue-50 to-indigo-100">
       <Navbar />
@@ -27,9 +29,11 @@ const MainBody = () => {
           ownership records with confidence.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Access System
-          </button>
+          <Link href={"/dashboard"} className="  px-8 py-3  bg-blue-600  hover:bg-blue-700 rounded-lg">
+            <Button className="font-semibold text-white hover:bg-transparent bg-transparent transition-colors">
+              Access System
+            </Button>
+          </Link>
         </div>
       </div>
 
